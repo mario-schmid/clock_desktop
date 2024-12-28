@@ -18,7 +18,7 @@ public class Main extends Application {
     ImageView ivZeigerMin = new ImageView();
     ImageView ivZeigerStd = new ImageView();
 
-    double opacity = 0.4;
+    double opacity = 0.9;
 
     @Override
     public void start(Stage stage) {
@@ -32,7 +32,7 @@ public class Main extends Application {
 
         double sek = t % 60;
         double min = (t / 60) % 60;
-        double std = ((t / 3600) + 2) % 24; // plus 2 Stunden Sommerzeit, plus 1 Stunde Winterzeit!
+        double std = ((t / 3600) + 1) % 24; // plus 2 Stunden Sommerzeit, plus 1 Stunde Winterzeit!
 
         int sekint = (int)sek;
         int minint = (int)min;
@@ -105,7 +105,7 @@ public class Main extends Application {
 
         stage.setScene(scene);
 
-        stage.getIcons().add(new Image("Uhr.png"));
+        //stage.getIcons().add(new Image(""));
         stage.setTitle("Clock");
 
         stage.setX(1440);
@@ -126,7 +126,7 @@ public class Main extends Application {
 
             double sek = t % 60;
             double min = (t / 60) % 60;
-            double std = ((t / 3600) + 2) % 24; // plus 2 Stunden Sommerzeit, plus 1 Stunde Winterzeit!
+            double std = ((t / 3600) + 1) % 24; // plus 2 Stunden Sommerzeit, plus 1 Stunde Winterzeit!
 
             int sekint = (int)sek;
             int minint = (int)min;
